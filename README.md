@@ -5,6 +5,5 @@ It includes a customizable editor with easy sharing features, map loading via Op
 
 Website is available at https://justkesha.github.io/routing-by-pso/ thanks to [Github Pages](https://pages.github.com).
 
-<br>
-> [!TIP]
+> [!NOTE]  
 > Documentation coming soon.
