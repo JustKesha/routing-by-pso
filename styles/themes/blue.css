@@ -1,0 +1,13 @@
+:root {
+    --main: rgb(255, 249, 62);
+    --black: #0000d5;
+    --dark: blue;
+    --gray: #24317a;
+    --light: rgb(242, 239, 227);
+    --light-text:#dcd4cc;
+    --gray-text: #9a968b;
+}
+:root {
+    --section-width: 80%;
+    --max-section-width: 1500px;
+}

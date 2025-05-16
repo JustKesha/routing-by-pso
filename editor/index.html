@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSUTI - Routing by PSO, Editor</title>
+    <link rel="icon" href="../media/favicon.png">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="section hero-section hero-section-short">
+        <div class="logo"><svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="svg3487" version="1.1" inkscape:version="0.91 r13725" xml:space="preserve" width="1000" height="750" viewBox="0 0 1000 750" sodipodi:docname="psuti_logo_black_CS3.svg"><metadata id="metadata3493"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title/></cc:Work></rdf:RDF></metadata><defs id="defs3491"><clipPath clipPathUnits="userSpaceOnUse" id="clipPath3501"><path d="M 0,600 800,600 800,0 0,0 0,600 Z" id="path3503" inkscape:connector-curvature="0"/></clipPath><clipPath clipPathUnits="userSpaceOnUse" id="clipPath3565"><path d="M 0,600 800,600 800,0 0,0 0,600 Z" id="path3567" inkscape:connector-curvature="0"/></clipPath></defs><sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="742" inkscape:window-height="480" id="namedview3489" showgrid="false" inkscape:zoom="0.31466667" inkscape:cx="500" inkscape:cy="375" inkscape:window-x="0" inkscape:window-y="0" inkscape:window-maximized="0" inkscape:current-layer="g3495"/><g id="g3495" inkscape:groupmode="layer" inkscape:label="psuti_logo_black_CS3" transform="matrix(1.25,0,0,-1.25,0,750)"><g id="g3497"><g id="g3499" clip-path="url(#clipPath3501)"><g id="g3505" transform="translate(297.1391,299.5513)"><path d="M 0,0 C 0,-23.472 -19.028,-42.5 -42.5,-42.5 -65.972,-42.5 -85,-23.472 -85,0 -85,23.472 -65.972,42.5 -42.5,42.5 -19.028,42.5 0,23.472 0,0" style="fill:var(--dark);fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3507" inkscape:connector-curvature="0"/></g><g id="g3509" transform="translate(293.6262,301.855)"><path d="m 0,0 c 0,-20.088 -16.284,-36.372 -36.372,-36.372 -20.088,0 -36.372,16.284 -36.372,36.372 0,20.088 16.284,36.372 36.372,36.372 C -16.284,36.372 0,20.088 0,0" style="fill:#4f4f51;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3511" inkscape:connector-curvature="0"/></g><g id="g3513" transform="translate(289.3,303.5467)"><path d="m 0,0 c 0,-16.674 -13.517,-30.192 -30.192,-30.192 -16.674,0 -30.192,13.518 -30.192,30.192 0,16.674 13.518,30.192 30.192,30.192 C -13.517,30.192 0,16.674 0,0" style="fill:#737477;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3515" inkscape:connector-curvature="0"/></g><g id="g3517" transform="translate(284.9448,305.6771)"><path d="m 0,0 c 0,-13.04 -10.571,-23.612 -23.612,-23.612 -13.04,0 -23.611,10.572 -23.611,23.612 0,13.04 10.571,23.612 23.611,23.612 C -10.571,23.612 0,13.04 0,0" style="fill:#97999c;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3519" inkscape:connector-curvature="0"/></g><g id="g3521" transform="translate(280.7697,307.8597)"><path d="m 0,0 c 0,-9.6 -7.782,-17.382 -17.382,-17.382 -9.599,0 -17.381,7.782 -17.381,17.382 0,9.6 7.782,17.382 17.381,17.382 C -7.782,17.382 0,9.6 0,0" style="fill:#bec0c2;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3523" inkscape:connector-curvature="0"/></g><g id="g3525" transform="translate(276.2029,310.0008)"><path d="m 0,0 c 0,-5.96 -4.831,-10.791 -10.791,-10.791 -5.96,0 -10.791,4.831 -10.791,10.791 0,5.96 4.831,10.791 10.791,10.791 C -4.831,10.791 0,5.96 0,0" style="fill:#d8d9db;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3527" inkscape:connector-curvature="0"/></g><g id="g3529" transform="translate(271.8849,311.8896)"><path d="m 0,0 c 0,-2.346 -1.902,-4.248 -4.248,-4.248 -2.346,0 -4.248,1.902 -4.248,4.248 0,2.346 1.902,4.248 4.248,4.248 C -1.902,4.248 0,2.346 0,0" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3531" inkscape:connector-curvature="0"/></g><g id="g3533" transform="translate(256.8052,336.9644)"><path d="m 0,0 c -19.496,0 -35.356,-15.861 -35.356,-35.356 0,-19.496 15.86,-35.356 35.356,-35.356 19.496,0 35.357,15.86 35.357,35.356 C 35.357,-15.861 19.496,0 0,0 m 0,-72.25 c -20.343,0 -36.893,16.551 -36.893,36.894 0,20.342 16.55,36.892 36.893,36.892 20.343,0 36.893,-16.55 36.893,-36.892 C 36.893,-55.699 20.343,-72.25 0,-72.25" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3535" inkscape:connector-curvature="0"/></g><g id="g3537" transform="translate(258.9717,332.7549)"><path d="m 0,0 c -16.041,0 -29.091,-13.05 -29.091,-29.091 0,-16.041 13.05,-29.091 29.091,-29.091 16.041,0 29.091,13.05 29.091,29.091 C 29.091,-13.05 16.041,0 0,0 m 0,-59.498 c -16.767,0 -30.408,13.641 -30.408,30.407 0,16.767 13.641,30.408 30.408,30.408 16.767,0 30.408,-13.641 30.408,-30.408 0,-16.766 -13.641,-30.407 -30.408,-30.407" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3539" inkscape:connector-curvature="0"/></g><g id="g3541" transform="translate(261.1382,328.5459)"><path d="m 0,0 c -12.586,0 -22.825,-10.239 -22.825,-22.825 0,-12.586 10.239,-22.825 22.825,-22.825 12.586,0 22.825,10.239 22.825,22.825 C 22.825,-10.239 12.586,0 0,0 m 0,-46.748 c -13.191,0 -23.923,10.731 -23.923,23.923 0,13.191 10.732,23.923 23.923,23.923 13.191,0 23.923,-10.732 23.923,-23.923 0,-13.192 -10.732,-23.923 -23.923,-23.923" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3543" inkscape:connector-curvature="0"/></g><g id="g3545" transform="translate(263.3042,324.3364)"><path d="m 0,0 c -9.131,0 -16.56,-7.429 -16.56,-16.56 0,-9.131 7.429,-16.559 16.56,-16.559 9.131,0 16.56,7.428 16.56,16.559 C 16.56,-7.429 9.131,0 0,0 m 0,-33.998 c -9.615,0 -17.437,7.824 -17.437,17.438 0,9.616 7.822,17.438 17.437,17.438 9.615,0 17.437,-7.822 17.437,-17.438 0,-9.614 -7.822,-17.438 -17.437,-17.438" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3547" inkscape:connector-curvature="0"/></g><g id="g3549" transform="translate(265.4707,320.1274)"><path d="m 0,0 c -5.676,0 -10.294,-4.618 -10.294,-10.294 0,-5.676 4.618,-10.294 10.294,-10.294 5.676,0 10.294,4.618 10.294,10.294 C 10.294,-4.618 5.676,0 0,0 m 0,-21.247 c -6.04,0 -10.953,4.914 -10.953,10.953 0,6.039 4.913,10.952 10.953,10.952 6.039,0 10.952,-4.913 10.952,-10.952 0,-6.039 -4.913,-10.953 -10.952,-10.953" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3551" inkscape:connector-curvature="0"/></g></g></g><g id="g3553" transform="translate(318.6704,276.701)"><path d="m 0,0 0,46.702 42.031,0 0,-46.702 -12.342,0 0,35.693 -17.347,0 L 12.342,0 0,0 Z" style="fill:var(--dark);fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3555" inkscape:connector-curvature="0"/></g><g id="g3557" transform="translate(372.937,276.701)"><path d="m 0,0 0,46.702 33.692,0 0,-11.009 -21.35,0 L 12.342,0 0,0 Z" style="fill:var(--dark);fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3559" inkscape:connector-curvature="0"/></g><g id="g3561"><g id="g3563" clip-path="url(#clipPath3565)"><g id="g3569" transform="translate(439.0254,281.7381)"><path d="m 0,0 c -1.157,-1.49 -2.392,-2.68 -3.703,-3.569 -1.313,-0.89 -2.681,-1.523 -4.104,-1.902 -1.423,-0.377 -2.935,-0.567 -4.536,-0.567 -1.201,0 -2.425,0.123 -3.67,0.367 -1.245,0.245 -2.512,0.546 -3.802,0.901 l 0,10.207 c 0.8,-0.311 1.678,-0.544 2.635,-0.7 0.956,-0.156 1.878,-0.233 2.769,-0.233 1.468,0 2.712,0.233 3.736,0.7 1.023,0.467 1.801,1.301 2.335,2.502 l 0.734,1.602 -18.213,32.357 13.676,0 10.275,-21.283 8.406,21.283 13.677,0 L 3.335,5.638 C 2.268,3.369 1.155,1.49 0,0" style="fill:var(--dark);fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3571" inkscape:connector-curvature="0"/></g><g id="g3573" transform="translate(504.5068,323.4026)"><path d="m 0,0 0,-11.008 -13.143,0 0,-35.694 -12.342,0 0,35.694 -13.21,0 0,11.008 L 0,0 Z" style="fill:var(--dark);fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3575" inkscape:connector-curvature="0"/></g><g id="g3577" transform="translate(542.8955,276.701)"><path d="m 0,0 0,19.081 c 0,1.29 0.021,2.612 0.066,3.97 0.043,1.356 0.112,2.591 0.202,3.702 L -18.012,0 l -11.675,0 0,46.702 12.341,0 0,-19.081 c 0,-1.291 -0.023,-2.625 -0.066,-4.003 -0.045,-1.38 -0.111,-2.625 -0.199,-3.736 l 18.279,26.82 11.674,0 L 12.342,0 0,0 Z" style="fill:var(--dark);fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3579" inkscape:connector-curvature="0"/></g></g></g></g></svg></div>
+        <div class="nav">
+            <a href="../">
+                Home page
+            </a>
+            <a href="./" class="active">
+                Editor
+            </a>
+            <a href="#DOCS-HREF">
+                Documentation
+            </a>
+        </div>
+        <div class="settings">
+            <a href="../settings/">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path stroke-width="1.5" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                    <path stroke-width="1.5" stroke-linejoin="round" d="M10.47 4.32c.602-1.306 2.458-1.306 3.06 0l.218.473a1.684 1.684 0 0 0 2.112.875l.49-.18c1.348-.498 2.66.814 2.162 2.163l-.18.489a1.684 1.684 0 0 0 .875 2.112l.474.218c1.305.602 1.305 2.458 0 3.06l-.474.218a1.684 1.684 0 0 0-.875 2.112l.18.49c.498 1.348-.814 2.66-2.163 2.162l-.489-.18a1.684 1.684 0 0 0-2.112.875l-.218.473c-.602 1.306-2.458 1.306-3.06 0l-.218-.473a1.684 1.684 0 0 0-2.112-.875l-.49.18c-1.348.498-2.66-.814-2.163-2.163l.181-.489a1.684 1.684 0 0 0-.875-2.112l-.474-.218c-1.305-.602-1.305-2.458 0-3.06l.474-.218a1.684 1.684 0 0 0 .875-2.112l-.18-.49c-.498-1.348.814-2.66 2.163-2.163l.489.181a1.684 1.684 0 0 0 2.112-.875l.218-.474Z"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="text-block text-block-hero-header">
+            <div id="preview"></div>
+            <div class="topic">
+                Editor
+            </div>
+            <div class="topic topic-huge">
+                Routing by PSO
+            </div>
+        </div>
+    </div>
+    
+    <div class="section" id="tools">
+        <div id="playing-top-panel">
+            <div class="cta cta-main-editor-controls">
+                <button onclick="setPlayingMode(PlayingModes.edit);" class="attention">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 20h16M4 20v-4l8-8M4 20h4l8-8m-4-4l2.869-2.869l.001-.001c.395-.395.593-.593.821-.667a1 1 0 0 1 .618 0c.228.074.425.272.82.666l1.74 1.74c.396.396.594.594.668.822a1 1 0 0 1 0 .618c-.074.228-.272.426-.668.822h0L16 12.001m-4-4l4 4"/></svg>
+                    </div>
+                    <div class="name">
+                        Edit
+                    </div>
+                </button>
+                <button onclick="InitColony();setPlayingMode(PlayingModes.edit);" class="button attention attention-secondary hidden" id="close-preview-btn">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024">
+                        <path fill="currentColor" stroke-width="20px" fill-rule="evenodd" d="M512 64c247.4 0 448 200.6 448 448S759.4 960 512 960S64 759.4 64 512S264.6 64 512 64m0 76c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m128.013 198.826c.023.007.042.018.083.059l45.02 45.019c.04.04.05.06.058.083a.118.118 0 0 1 0 .07c-.007.022-.018.041-.059.082L557.254 512l127.861 127.862a.268.268 0 0 1 .05.06l.009.023a.118.118 0 0 1 0 .07c-.007.022-.018.041-.059.082l-45.019 45.02c-.04.04-.06.05-.083.058a.118.118 0 0 1-.07 0c-.022-.007-.041-.018-.082-.059L512 557.254L384.14 685.115c-.042.041-.06.052-.084.059a.118.118 0 0 1-.07 0c-.022-.007-.041-.018-.082-.059l-45.02-45.019a.199.199 0 0 1-.058-.083a.118.118 0 0 1 0-.07c.007-.022.018-.041.059-.082L466.745 512l-127.86-127.86a.268.268 0 0 1-.05-.061l-.009-.023a.118.118 0 0 1 0-.07c.007-.022.018-.041.059-.082l45.019-45.02c.04-.04.06-.05.083-.058a.118.118 0 0 1 .07 0c.022.007.041.018.082.059L512 466.745l127.862-127.86c.04-.041.06-.052.083-.059a.118.118 0 0 1 .07 0Z"/></svg>
+                    </div>
+                    <div class="name">
+                        Close preview
+                    </div>
+                </button>
+                <button onclick="Pause()" id="PAUSE_BUTTON">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path stroke-linejoin="round" d="M6 6h4v12H6V6ZM14 6h4v12h-4V6Z"/>
+                        </svg>
+                    </div>
+                    <div class="name">
+                        Pause
+                    </div>
+                </button>
+                <button onclick="Pause()" class="hidden attention attention-secondary" id="CONTINUE_BUTTON">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 17.259V6.741a1 1 0 0 1 1.504-.864l9.015 5.26a1 1 0 0 1 0 1.727l-9.015 5.259A1 1 0 0 1 7 17.259Z"/>
+                        </svg>
+                    </div>
+                    <div class="name">
+                        Continue
+                    </div>
+                </button>
+                <button onclick="NextFrame();" id="NEXTFRAME_BUTTON">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 5v6.5a3 3 0 003 3h12M16.5 18l3.5-3.5-3.5-3.5"/>
+                        </svg>
+                    </div>
+                    <div class="name">
+                        Next frame
+                    </div>
+                </button>
+                <button onclick="RefreshColony();">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20 20v-5h-5M4 4v5h5m10.938 2A8.001 8.001 0 005.07 8m-1.008 5a8.001 8.001 0 0014.868 3"/>
+                        </svg>
+                    </div>
+                    <div class="name">
+                        Refresh
+                    </div>
+                </button>
+                <button onclick="SaveColonyState();setPlayingMode(PlayingModes.edit, null, false);">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" d="M6 21h12M12 3v14m0 0l5-5m-5 5l-5-5"/></svg>
+                    </div>
+                    <div class="name">
+                        Save
+                    </div>
+                </button>
+            </div>
+            <div class="cta switch right" title="The speed at which the particles move">
+                <button class="cta-sub-title topic-visuals">
+                    Speed
+                </button>
+                <button onclick="ApplySpeedPreset(0);" id="speed-x0">
+                    x1
+                </button>
+                <button onclick="ApplySpeedPreset(1);" id="speed-x1">
+                    x2
+                </button>
+                <button onclick="ApplySpeedPreset(2);" id="speed-x2">
+                    x3
+                </button>
+            </div>
+            <div class="cta switch right" title="How many simulation ticks per second to perform">
+                <button class="cta-sub-title topic-visuals">
+                    Frames  
+                </button>
+                <button onclick="ApplyFpsSettings(0);" id="fps-v0">
+                    1
+                </button>
+                <button onclick="ApplyFpsSettings(1);" id="fps-v1">
+                    15
+                </button>
+                <button onclick="ApplyFpsSettings(2);" id="fps-v2">
+                    60
+                </button>
+            </div>
+        </div>
+        <div id="edit-top-panel">
+            <div class="cta cta-main-editor-controls">
+                <button class="attention" onclick="setPlayingMode(PlayingModes.play);">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 17.259V6.741a1 1 0 0 1 1.504-.864l9.015 5.26a1 1 0 0 1 0 1.727l-9.015 5.259A1 1 0 0 1 7 17.259Z"/>
+                        </svg>
+                    </div>
+                    <div class="name">
+                        Start
+                    </div>
+                </button>
+                <button onclick="ColonyFill(true)">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"><path d="M8 18C19.955 18 20.917 7.83 20.994 2.997a.983.983 0 0 0-1.006-.988C3 2.321 3 10.557 3 18v4"/><path d="M3 18s0-6 8-7"/></g></svg>
+                    </div>
+                    <div class="name">
+                        Fill
+                    </div>
+                </button>
+                <button onclick="ColonyRandomise()">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20 20v-5h-5M4 4v5h5m10.938 2A8.001 8.001 0 005.07 8m-1.008 5a8.001 8.001 0 0014.868 3"/>
+                        </svg>
+                    </div>
+                    <div class="name">
+                        Random
+                    </div>
+                </button>
+                <button onclick="ColonyClear()">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l.934 13.071A1 1 0 007.93 20h8.138a1 1 0 00.997-.929L18 6m-6 5v4m8-9H4m4.5 0l.544-1.632A2 2 0 0110.941 3h2.117a2 2 0 011.898 1.368L15.5 6"/>
+                        </svg>
+                    </div>
+                    <div class="name">
+                        Clear
+                    </div>
+                </button>
+            </div>
+            <div class="cta switch right">
+                <button class="cta-sub-title topic-visuals">
+                    Brush
+                </button>
+                <button title="The target brush" class="no-text-button" id="brush-obj" onclick="SetBrushMode('obj')">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 21a29.776 29.776 0 0 1-3.5-3.531C6.9 15.558 5 12.712 5 10a7 7 0 0 1 11.952-4.951A6.955 6.955 0 0 1 19 10c0 2.712-1.9 5.558-3.5 7.469A29.777 29.777 0 0 1 12 21Zm0-14a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z"/></svg>
+                    </div>
+                </button>
+                <button title="The barrier brush" class="no-text-button" id="brush-wal" onclick="SetBrushMode('wal')">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m5.75 5.75l12.5 12.5M12 21a9 9 0 1 1 0-18a9 9 0 0 1 0 18"/></svg>
+                    </div>
+                </button>
+                <button title="The entity brush" class="no-text-button" id="brush-ent" onclick="SetBrushMode('ent')">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M2.002 9.538c-.023.411.207.794.581.966l7.504 3.442l3.442 7.503c.164.356.52.583.909.583l.057-.002a1 1 0 0 0 .894-.686l5.595-17.032c.117-.358.023-.753-.243-1.02s-.66-.358-1.02-.243L2.688 8.645a.997.997 0 0 0-.686.893z"/></svg>
+                    </div>
+                </button>
+                <button title="The eraser brush" class="no-text-button" id="brush-del" onclick="SetBrushMode('del')">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path d="M225 80.4L183.6 39a24 24 0 0 0-33.94 0L31 157.66a24 24 0 0 0 0 33.94l30.06 30.06a8 8 0 0 0 5.68 2.34H216a8 8 0 0 0 0-16h-84.7l93.7-93.66a24 24 0 0 0 0-33.94M213.67 103L160 156.69L107.31 104L161 50.34a8 8 0 0 1 11.32 0l41.38 41.38a8 8 0 0 1 0 11.31Z"/></svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="canvas-holder" id="main-canvas-holder">
+            <Canvas id="Canvas" onclick="copyCanvasToClipboard('Canvas')"></Canvas>
+        </div>
+    </div>
+    
+    <div class="section editor-before-footer">
+        <div id="edit-bottom-panel">
+        <div class="section hero-section-underline"></div>
+            <div class="swarm-settings">
+                <div class="swarm-settings-block swarm-settings-block-compact">
+                    <div class="topic">
+                        Map import
+                    </div>
+                    <p class="text-block">
+                        To import a map use editor urls or one of the two fields below:
+                        to load a map from code or real world coordinates, accordingly. Don't forget to click confirm.
+                    </p>
+                    <input type="text" placeholder="Map code" id="map-import-code"><br>
+                    <input type="text" placeholder="Coords (53.199396, 50.103636)" id="coords-import"><br>
+                    <div class="swarm-setting" id="import_map_zoom">
+                        <span>
+                            <div class="name">
+                                Scale
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <input type="number" value="250" min="0" max="3000" onchange="SettingsSet('import_map_zoom', this.value);" onclick="this.select();">
+                            </div>
+                        </span>
+                    </div>
+                    <div class="cta line-break">
+                        <button class="button attention attention-secondary" onclick="LoadMap();">
+                            <div class="icon">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25px"><circle cx="12" cy="12" r="9"/><path stroke-dasharray="14" stroke-dashoffset="14" d="M8 12L11 15L16 10"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="14;0"/></path></g></svg>
+                            </div>
+                            <div class="name">
+                                Confirm
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="swarm-settings-block">
+                    <div class="topic">
+                        Map export
+                    </div>
+                    <p>
+                        Below are the options to share your current map!
+                    </p>
+                    <div class="code-block code-block-small" onclick="copyText(selectText('map-export-code'));" style="display: none;">
+    <pre><code id="map-export-code"></code></pre>
+                    </div>
+                    <div class="cta line-break">
+                        <button class="button attention attention-secondary" onclick="copyText(getShareMapUlr());">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25px"><path d="M13.544 10.456a4.368 4.368 0 0 0-6.176 0l-3.089 3.088a4.367 4.367 0 1 0 6.177 6.177L12 18.177"/><path d="M10.456 13.544a4.368 4.368 0 0 0 6.176 0l3.089-3.088a4.367 4.367 0 1 0-6.177-6.177L12 5.823"/></g></svg>
+                            </div>
+                            <div class="name">
+                                Copy url
+                            </div>
+                        </button>
+                        <button class="button" onclick="copyText(selectText('map-export-code'));">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-linejoin="round" d="M15.5 4H18a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2.5"/><path stroke-linejoin="round" d="M8.621 3.515A2 2 0 0 1 10.561 2h2.877a2 2 0 0 1 1.94 1.515L16 6H8z"/><path d="M9 12h6m-6 4h6"/></g></svg>
+                            </div>
+                            <div class="name">
+                                Copy code
+                            </div>
+                        </button>
+
+                        <a class="button" href="./?m=preview">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M21.257 10.962c.474.62.474 1.457 0 2.076C19.764 14.987 16.182 19 12 19c-4.182 0-7.764-4.013-9.257-5.962a1.692 1.692 0 0 1 0-2.076C4.236 9.013 7.818 5 12 5c4.182 0 7.764 4.013 9.257 5.962"/><circle cx="12" cy="12" r="3"/></g></svg>
+                            </div>
+                            <div class="name">
+                                Preview
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta lefted-no-attention-cta cta-closer-down" id="reset-settings-cta">
+                <a class="button non-important" id="map_preset_maze">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10"/><path d="M14 2v4a2 2 0 0 0 2 2h4m-9.6 4.6a2 2 0 1 1 3 3L8 21l-4 1l1-4Z"/></g></svg>
+                    </div>
+                    <div class="name">
+                        Load maze
+                    </div>
+                </a>
+                <a class="button non-important" id="map_preset_broken_maze">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10"/><path d="M14 2v4a2 2 0 0 0 2 2h4m-9.6 4.6a2 2 0 1 1 3 3L8 21l-4 1l1-4Z"/></g></svg>
+                    </div>
+                    <div class="name">
+                        Load broken maze
+                    </div>
+                </a>
+                <a class="button non-important" id="map_preset_city">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10"/><path d="M14 2v4a2 2 0 0 0 2 2h4m-9.6 4.6a2 2 0 1 1 3 3L8 21l-4 1l1-4Z"/></g></svg>
+                    </div>
+                    <div class="name">
+                        Load urban Maze
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="playing-bottom-panel">
+        <div class="section hero-section-underline cinema-mode-hide play-mode-hide"></div>
+            <div><div class="cta right-stick-parent lefted-no-attention-cta cta-closer-down" id="reset-settings-cta">
+                <a class="button non-important" onclick="UpdateSettingsWith(SettingPresets['connections']);">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0-2 0"/><path d="M16.616 13.924a5 5 0 1 0-9.23 0"/><path d="M20.307 15.469a9 9 0 1 0-16.615 0"/><path d="m9 21l3-9l3 9m-5-2h4"/></g></svg>
+                    </div>
+                    <div class="name">
+                        Connections preset
+                    </div>
+                </a>
+                <a class="button non-important" onclick="UpdateSettingsWith(SettingPresets['optimal']);">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25px" d="M5.636 19.364a9 9 0 1 1 12.728 0M16 9l-4 4"/></svg></div>
+                    <div class="name">
+                        Performance preset
+                    </div>
+                </a>
+                <a class="button non-important" onclick="UpdateSettingsWith(SettingPresets['basic']);">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25px"><path d="M18.364 18.364a9 9 0 1 0-12.728 0"/><path d="M11.766 22h.468a2 2 0 0 0 1.985-1.752l.5-4A2 2 0 0 0 12.734 14h-1.468a2 2 0 0 0-1.985 2.248l.5 4A2 2 0 0 0 11.766 22M10 9a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/></g></svg>
+                    </div>
+                    <div class="name">
+                        Particles preset
+                    </div>
+                </a>
+            </div>
+            <div class="cta right right-stick cta-closer-down">
+                <a class="button non-important" onclick="UpdateSettingsWith(DefaultSettings);" id="reset-settings-bttn">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.35"><path d="M19.734 16.06a8.923 8.923 0 0 1-3.915 3.978a8.706 8.706 0 0 1-5.471.832a8.795 8.795 0 0 1-4.887-2.64a9.067 9.067 0 0 1-2.388-5.079a9.136 9.136 0 0 1 1.044-5.53a8.904 8.904 0 0 1 4.069-3.815a8.7 8.7 0 0 1 5.5-.608c1.85.401 3.366 1.313 4.62 2.755c.151.16.735.806 1.22 1.781"/><path d="m15.069 7.813l5.04.907L21 3.59"/></g></svg>
+                    </div>
+                    <div class="name">
+                        Reset settings
+                    </div>
+                </a>
+            </div></div>
+            <div class="swarm-settings swarm-settings-comp cinema-mode-hide">
+                <div class="swarm-settings-block">
+                    <div class="topic">
+                        General settings
+                    </div>
+                    <div class="swarm-setting" id="communication_radius">
+                        <span>
+                            <div class="name">
+                                Communication distance
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <input type="number" min="0" max="100" value="15" onchange="SettingsSet('communication_radius', this.value);" onclick="this.select();">
+                            </div>
+                        </span>
+                    </div>
+                    <div class="swarm-setting" id="objective_speed">
+                        <span>
+                            <div class="name">
+                                Target shift speed
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <input type="number" min="0" max="3" value="0" onchange="SettingsSet('objective_speed', this.value);" onclick="this.select();">
+                            </div>
+                        </span>
+                    </div>
+                    <div class="swarm-setting" id="grid">
+                        <span>
+                            <div class="name">
+                                Editor magnet grid
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <input type="number" min="0" max="20" value="0" onchange="SettingsSet('grid', this.value);" onclick="this.select();">
+                            </div>
+                        </span>
+                    </div>
+                    <div class="swarm-setting" id="walls_collision">
+                        <span>
+                            <div class="name">
+                                Borders collision
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <button class="hidden" onclick="SettingsSet('walls_collision', false);">
+                                    <div class="icon switch-icon-on">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 6H9a6 6 0 1 0 0 12h6a6 6 0 0 0 0-12Z"/>
+                                            <circle class="svg-fill" cx="15" cy="12" r="3"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button>
+                                    <div class="icon" onclick="SettingsSet('walls_collision', true);">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linejoin="round" d="M3 12a6 6 0 0 0 6 6h6a6 6 0 0 0 0-12H9a6 6 0 0 0-6 6Z"/>
+                                            <path stroke-linejoin="round" d="M12 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="swarm-setting" id="autofill">
+                        <span>
+                            <div class="name">
+                                Autofill
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <button class="hidden" onclick="SettingsSet('autofill', false);">
+                                    <div class="icon switch-icon-on">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 6H9a6 6 0 1 0 0 12h6a6 6 0 0 0 0-12Z"/>
+                                            <circle class="svg-fill" cx="15" cy="12" r="3"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button>
+                                    <div class="icon" onclick="SettingsSet('autofill', true);">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linejoin="round" d="M3 12a6 6 0 0 0 6 6h6a6 6 0 0 0 0-12H9a6 6 0 0 0-6 6Z"/>
+                                            <path stroke-linejoin="round" d="M12 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="cta cta-advanced">
+                        <button class="hidden" id="advanced-settings-show" onclick="AdvancedSettingsShow(true);">
+                            <div class="icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                    <path stroke-linecap="round" d="M18 12H6"/>
+                                </svg>
+                            </div>
+                            <div class="name">
+                                Advanced
+                            </div>
+                        </button>
+                        <button id="advanced-settings-hide" onclick="AdvancedSettingsShow(false);">
+                            <div class="icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                    <path stroke-linecap="round" d="M5 10l7 7 7-7"/>
+                                </svg>
+                            </div>
+                            <div class="name">
+                                Advanced
+                            </div>
+                        </button>
+                    </div>
+                    <div class="advanced-settings" id="advanced-settings-block">
+                        <div class="swarm-setting" id="entites_count">
+                            <span>
+                                <div class="name">
+                                    Fill particles
+
+                                    <a class="resource-warning" href="../settings/#settings-reset-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M19 2v4m0 4.01l.01-.011M16 14v1.4a.6.6 0 0 1-.6.6H8.6a.6.6 0 0 1-.6-.6V8.6a.6.6 0 0 1 .6-.6H14"/><path d="M20 14v5.4a.6.6 0 0 1-.6.6H4.6a.6.6 0 0 1-.6-.6V4.6a.6.6 0 0 1 .6-.6H14m6 13h2m-5 3v2m-5-2v2m-5-2v2m-3-5H2m2-5H2m2-5H2m10-3V2M7 4V2"/></g></svg>
+                                        <span>
+                                            Resource demanding!
+                                        </span>
+                                    </a>
+                                </div>
+                            </span>
+                            <span class="warm-setting-right-part">
+                                <div class="state">
+                                    <input type="number" min="0" max="10000" value="1500" onchange="SettingsSet('entites_count', this.value);" onclick="this.select();">
+                                </div>
+                            </span>
+                        </div>
+                        <div class="swarm-setting" id="default_objectives_count">
+                            <span>
+                                <div class="name">
+                                    Fill targets
+                                </div>
+                            </span>
+                            <span class="warm-setting-right-part">
+                                <div class="state">
+                                    <input type="number" min="0" max="10" value="2" onchange="SettingsSet('default_objectives_count', this.value);" onclick="this.select();">
+                                </div>
+                            </span>
+                        </div>
+                        <div class="swarm-setting" id="entity_min_speed">
+                            <span>
+                                <div class="name">
+                                    Particle min speed
+                                </div>
+                            </span>
+                            <span class="warm-setting-right-part">
+                                <div class="state">
+                                    <input type="number" min="0" max="5" value="0.001" onchange="SettingsSet('entity_min_speed', this.value);" onclick="this.select();">
+                                </div>
+                            </span>
+                        </div>
+                        <div class="swarm-setting" id="entity_max_speed">
+                            <span>
+                                <div class="name">
+                                    Particle max speed
+                                </div>
+                            </span>
+                            <span class="warm-setting-right-part">
+                                <div class="state">
+                                    <input type="number" min="0" max="5" value="0.25" onchange="SettingsSet('entity_max_speed', this.value);" onclick="this.select();">
+                                </div>
+                            </span>
+                        </div>
+                        <div class="swarm-setting" id="ent_brush_stack">
+                            <span>
+                                <div class="name">
+                                    Particle brush stack
+
+                                    <a class="resource-warning" href="../settings/#settings-reset-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M19 2v4m0 4.01l.01-.011M16 14v1.4a.6.6 0 0 1-.6.6H8.6a.6.6 0 0 1-.6-.6V8.6a.6.6 0 0 1 .6-.6H14"/><path d="M20 14v5.4a.6.6 0 0 1-.6.6H4.6a.6.6 0 0 1-.6-.6V4.6a.6.6 0 0 1 .6-.6H14m6 13h2m-5 3v2m-5-2v2m-5-2v2m-3-5H2m2-5H2m2-5H2m10-3V2M7 4V2"/></g></svg>
+                                        <span>
+                                            Resource demanding!
+                                        </span>
+                                    </a>
+                                </div>
+                            </span>
+                            <span class="warm-setting-right-part">
+                                <div class="state">
+                                    <input type="number" min="0" max="5000" value="50" onchange="SettingsSet('ent_brush_stack', this.value);" onclick="this.select();">
+                                </div>
+                            </span>
+                        </div>
+                        <div class="swarm-setting" id="objective_size">
+                            <span>
+                                <div class="name">
+                                    Target size
+                                </div>
+                            </span>
+                            <span class="warm-setting-right-part">
+                                <div class="state">
+                                    <input type="number" min="0" max="20" value="10" onchange="SettingsSet('objective_size', this.value);" onclick="this.select();">
+                                </div>
+                            </span>
+                        </div>
+                        <div class="swarm-setting" id="auto_reassign_objectives">
+                            <span>
+                                <div class="name">
+                                    Reassign targets on startup
+                                </div>
+                            </span>
+                            <span class="warm-setting-right-part">
+                                <div class="state">
+                                    <button class="hidden" onclick="SettingsSet('auto_reassign_objectives', false);">
+                                        <div class="icon switch-icon-on">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 6H9a6 6 0 1 0 0 12h6a6 6 0 0 0 0-12Z"/>
+                                                <circle class="svg-fill" cx="15" cy="12" r="3"/>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                    <button>
+                                        <div class="icon" onclick="SettingsSet('auto_reassign_objectives', true);">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                                <path stroke-linejoin="round" d="M3 12a6 6 0 0 0 6 6h6a6 6 0 0 0 0-12H9a6 6 0 0 0-6 6Z"/>
+                                                <path stroke-linejoin="round" d="M12 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swarm-settings-block">
+                    <div class="topic">
+                        Display settings
+                    </div>
+                    <div class="swarm-setting" id="colors">
+                        <span>
+                            <div class="name">
+                                Colors
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <button class="hidden" onclick="SettingsSet('colors', false);">
+                                    <div class="icon switch-icon-on">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 6H9a6 6 0 1 0 0 12h6a6 6 0 0 0 0-12Z"/>
+                                            <circle class="svg-fill" cx="15" cy="12" r="3"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button>
+                                    <div class="icon" onclick="SettingsSet('colors', true);">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linejoin="round" d="M3 12a6 6 0 0 0 6 6h6a6 6 0 0 0 0-12H9a6 6 0 0 0-6 6Z"/>
+                                            <path stroke-linejoin="round" d="M12 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="swarm-setting" id="mono_color">
+                        <span>
+                            <div class="name">
+                                Minimum colors
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <button class="hidden" onclick="SettingsSet('mono_color', false);">
+                                    <div class="icon switch-icon-on">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 6H9a6 6 0 1 0 0 12h6a6 6 0 0 0 0-12Z"/>
+                                            <circle class="svg-fill" cx="15" cy="12" r="3"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button>
+                                    <div class="icon" onclick="SettingsSet('mono_color', true);">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linejoin="round" d="M3 12a6 6 0 0 0 6 6h6a6 6 0 0 0 0-12H9a6 6 0 0 0-6 6Z"/>
+                                            <path stroke-linejoin="round" d="M12 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+                    
+                    <div class="swarm-setting" id="optimized_view">
+                        <span>
+                            <div class="name">
+                                Grid
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <button class="hidden" onclick="SettingsSet('optimized_view', false); SettingsSet('display_entities', true);">
+                                    <div class="icon switch-icon-on">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 6H9a6 6 0 1 0 0 12h6a6 6 0 0 0 0-12Z"/>
+                                            <circle class="svg-fill" cx="15" cy="12" r="3"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button>
+                                    <div class="icon" onclick="SettingsSet('optimized_view', true); SettingsSet('display_entities', false);">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linejoin="round" d="M3 12a6 6 0 0 0 6 6h6a6 6 0 0 0 0-12H9a6 6 0 0 0-6 6Z"/>
+                                            <path stroke-linejoin="round" d="M12 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="swarm-setting" id="optimized_view_gap">
+                        <span>
+                            <div class="name">
+                                Grid size
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <input type="number" min="1" max="25" value="10" onchange="SettingsSet('optimized_view_gap', this.value);" onclick="this.select();">
+                            </div>
+                        </span>
+                    </div>
+                    <div class="swarm-setting" id="optimized_view_opac">
+                        <span>
+                            <div class="name">
+                                Grid transparency
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <input type="number" min="1" max="100" value="18" onchange="SettingsSet('optimized_view_opac', this.value);" onclick="this.select();">
+                            </div>
+                        </span>
+                    </div>
+                    <div class="swarm-setting" id="glow">
+                        <span>
+                            <div class="name">
+                                Glow
+
+                                <a class="resource-warning" href="../settings/#settings-reset-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M19 2v4m0 4.01l.01-.011M16 14v1.4a.6.6 0 0 1-.6.6H8.6a.6.6 0 0 1-.6-.6V8.6a.6.6 0 0 1 .6-.6H14"/><path d="M20 14v5.4a.6.6 0 0 1-.6.6H4.6a.6.6 0 0 1-.6-.6V4.6a.6.6 0 0 1 .6-.6H14m6 13h2m-5 3v2m-5-2v2m-5-2v2m-3-5H2m2-5H2m2-5H2m10-3V2M7 4V2"/></g></svg>
+                                    <span>
+                                        Resource demanding!
+                                    </span>
+                                </a>
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <input type="number" min="0" max="100" value="5" onchange="SettingsSet('glow', this.value);" onclick="this.select();">
+                            </div>
+                        </span>
+                    </div>
+
+                    <div class="swarm-setting" id="display_connections">
+                        <span>
+                            <div class="name">
+                                Connections
+
+                                <a class="resource-warning" href="../settings/#settings-reset-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M19 2v4m0 4.01l.01-.011M16 14v1.4a.6.6 0 0 1-.6.6H8.6a.6.6 0 0 1-.6-.6V8.6a.6.6 0 0 1 .6-.6H14"/><path d="M20 14v5.4a.6.6 0 0 1-.6.6H4.6a.6.6 0 0 1-.6-.6V4.6a.6.6 0 0 1 .6-.6H14m6 13h2m-5 3v2m-5-2v2m-5-2v2m-3-5H2m2-5H2m2-5H2m10-3V2M7 4V2"/></g></svg>
+                                    <span>
+                                        Resource demanding!
+                                    </span>
+                                </a>
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <button class="hidden" onclick="SettingsSet('display_connections', false);">
+                                    <div class="icon switch-icon-on">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 6H9a6 6 0 1 0 0 12h6a6 6 0 0 0 0-12Z"/>
+                                            <circle class="svg-fill" cx="15" cy="12" r="3"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button>
+                                    <div class="icon" onclick="SettingsSet('display_connections', true);">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linejoin="round" d="M3 12a6 6 0 0 0 6 6h6a6 6 0 0 0 0-12H9a6 6 0 0 0-6 6Z"/>
+                                            <path stroke-linejoin="round" d="M12 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="swarm-setting" id="only_log_good_connections">
+                        <span>
+                            <div class="name">
+                                Connections extra
+
+                                <a class="resource-warning" href="../settings/#settings-reset-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M19 2v4m0 4.01l.01-.011M16 14v1.4a.6.6 0 0 1-.6.6H8.6a.6.6 0 0 1-.6-.6V8.6a.6.6 0 0 1 .6-.6H14"/><path d="M20 14v5.4a.6.6 0 0 1-.6.6H4.6a.6.6 0 0 1-.6-.6V4.6a.6.6 0 0 1 .6-.6H14m6 13h2m-5 3v2m-5-2v2m-5-2v2m-3-5H2m2-5H2m2-5H2m10-3V2M7 4V2"/></g></svg>
+                                    <span>
+                                        Resource demanding!
+                                    </span>
+                                </a>
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <button class="hidden" onclick="SettingsSet('only_log_good_connections', false);">
+                                    <div class="icon">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linejoin="round" d="M3 12a6 6 0 0 0 6 6h6a6 6 0 0 0 0-12H9a6 6 0 0 0-6 6Z"/>
+                                            <path stroke-linejoin="round" d="M12 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button onclick="SettingsSet('only_log_good_connections', true);">
+                                    <div class="icon switch-icon-on">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 6H9a6 6 0 1 0 0 12h6a6 6 0 0 0 0-12Z"/>
+                                            <circle class="svg-fill" cx="15" cy="12" r="3"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="swarm-setting" id="display_entities">
+                        <span>
+                            <div class="name">
+                                Show particles
+
+                                <a class="resource-warning" href="../settings/#settings-reset-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M19 2v4m0 4.01l.01-.011M16 14v1.4a.6.6 0 0 1-.6.6H8.6a.6.6 0 0 1-.6-.6V8.6a.6.6 0 0 1 .6-.6H14"/><path d="M20 14v5.4a.6.6 0 0 1-.6.6H4.6a.6.6 0 0 1-.6-.6V4.6a.6.6 0 0 1 .6-.6H14m6 13h2m-5 3v2m-5-2v2m-5-2v2m-3-5H2m2-5H2m2-5H2m10-3V2M7 4V2"/></g></svg>
+                                    <span>
+                                        Resource demanding!
+                                    </span>
+                                </a>
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <button class="hidden" onclick="SettingsSet('display_entities', false);">
+                                    <div class="icon switch-icon-on">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 6H9a6 6 0 1 0 0 12h6a6 6 0 0 0 0-12Z"/>
+                                            <circle class="svg-fill" cx="15" cy="12" r="3"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button>
+                                    <div class="icon" onclick="SettingsSet('display_entities', true);">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linejoin="round" d="M3 12a6 6 0 0 0 6 6h6a6 6 0 0 0 0-12H9a6 6 0 0 0-6 6Z"/>
+                                            <path stroke-linejoin="round" d="M12 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="swarm-setting" id="display_directions">
+                        <span>
+                            <div class="name">
+                                Show directions
+
+                                <a class="resource-warning" href="../settings/#settings-reset-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M19 2v4m0 4.01l.01-.011M16 14v1.4a.6.6 0 0 1-.6.6H8.6a.6.6 0 0 1-.6-.6V8.6a.6.6 0 0 1 .6-.6H14"/><path d="M20 14v5.4a.6.6 0 0 1-.6.6H4.6a.6.6 0 0 1-.6-.6V4.6a.6.6 0 0 1 .6-.6H14m6 13h2m-5 3v2m-5-2v2m-5-2v2m-3-5H2m2-5H2m2-5H2m10-3V2M7 4V2"/></g></svg>
+                                    <span>
+                                        Resource demanding!
+                                    </span>
+                                </a>
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <button class="hidden" onclick="SettingsSet('display_directions', false);">
+                                    <div class="icon switch-icon-on">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 6H9a6 6 0 1 0 0 12h6a6 6 0 0 0 0-12Z"/>
+                                            <circle class="svg-fill" cx="15" cy="12" r="3"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button>
+                                    <div class="icon" onclick="SettingsSet('display_directions', true);">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linejoin="round" d="M3 12a6 6 0 0 0 6 6h6a6 6 0 0 0 0-12H9a6 6 0 0 0-6 6Z"/>
+                                            <path stroke-linejoin="round" d="M12 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="swarm-setting" id="entity_size">
+                        <span>
+                            <div class="name">
+                                Particle size
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <input type="number" min="0.1" max="10" value="2" onchange="SettingsSet('entity_size', this.value);" onclick="this.select();">
+                            </div>
+                        </span>
+                    </div>
+                    <div class="swarm-setting" id="transparent_background">
+                        <span>
+                            <div class="name">
+                                Transparent background
+                            </div>
+                        </span>
+                        <span class="warm-setting-right-part">
+                            <div class="state">
+                                <button class="hidden" onclick="SettingsSet('transparent_background', false);">
+                                    <div class="icon switch-icon-on">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 6H9a6 6 0 1 0 0 12h6a6 6 0 0 0 0-12Z"/>
+                                            <circle class="svg-fill" cx="15" cy="12" r="3"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button>
+                                    <div class="icon" onclick="SettingsSet('transparent_background', true);">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path stroke-linejoin="round" d="M3 12a6 6 0 0 0 6 6h6a6 6 0 0 0 0-12H9a6 6 0 0 0-6 6Z"/>
+                                            <path stroke-linejoin="round" d="M12 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section hero-section-underline cinema-mode-hide play-mode-hide"></div>
+    
+    <div class="section footer-section">
+        <div class="footer-links-part">
+            <div class="footer-links">
+                <a href="https://github.com/JustKesha">
+                    Author
+                </a>
+                <a href="https://www.psuti.ru/en">
+                    University
+                </a>
+                <a href="https://t.me/MangoAvocadoSalad">
+                    Contacts
+                </a>
+                <a href="https://github.com/JustKesha/routing-by-pso">
+                    Source
+                </a>
+                <a href="#DOCS-HREF">
+                    Documentation
+                </a>
+            </div>
+            <div class="footer-links footer-links-right">
+                <a href="../ru">
+                    Русская версия
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../scripts/swarm.min.js"></script>
+<script src="../scripts/swarm.main.js"></script>
+<script src="../scripts/select.js"></script>
+<script src="../scripts/copylink.js"></script>
+<script src="../scripts/themes.js"></script>
+<script>
+    EditorPageInit();
+</script>
+</html>
