@@ -596,6 +596,30 @@
                                 </div>
                             </span>
                         </div>
+                        <div class="swarm-setting" id="direction_shift_chance">
+                            <span>
+                                <div class="name">
+                                    Шанс отклонения
+                                </div>
+                            </span>
+                            <span class="warm-setting-right-part">
+                                <div class="state">
+                                    <input type="number" min="0" max="100" value="10" onchange="SettingsSet('direction_shift_chance', this.value);" onclick="this.select();">
+                                </div>
+                            </span>
+                        </div>
+                        <div class="swarm-setting" id="direction_shift_multi">
+                            <span>
+                                <div class="name">
+                                    Сила отклонения
+                                </div>
+                            </span>
+                            <span class="warm-setting-right-part">
+                                <div class="state">
+                                    <input type="number" min="0" max="100" value="10" onchange="SettingsSet('direction_shift_multi', this.value);" onclick="this.select();">
+                                </div>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div class="swarm-settings-block">

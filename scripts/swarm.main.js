@@ -22,7 +22,7 @@ const DefaultSettings = {
     'display_directions': false,
     'optimized_view': true,
     'optimized_view_gap': 3,
-    'glow': 10,
+    'glow': 25,
     'walls_collision': true,
     'display_barriers': true,
     'draw_fps': 80,
@@ -38,7 +38,9 @@ const DefaultSettings = {
     'auto_reassign_objectives': true,
     'grid': 3,
     'transparent_background': true,
-    'optimized_view_opac': 15,
+    'optimized_view_opac': 30,
+    'direction_shift_chance': 25,
+    'direction_shift_multi': 25,
 }
 let HideSettingsInEdit = false;
 let DirectionMarkerWidthMult = .75;
@@ -98,6 +100,7 @@ const SettingPresets = {
         'entity_size': 1,
         'colors': true,
         'mono_color': false,
+        'optimized_view_opac': 20,
         'glow': 10,
     },
     'optimal': {
@@ -111,7 +114,8 @@ const SettingPresets = {
         
         'colors': true,
         'mono_color': true,
-        'glow': 1,
+        'optimized_view_opac': 15,
+        'glow': 20,
     },
     'connections': {
         'optimized_view': false,
@@ -122,7 +126,8 @@ const SettingPresets = {
         'only_log_good_connections': true,
 
         'mono_color': false,
-        'glow': 10,
+        'optimized_view_opac': 20,
+        'glow': 15,
     },
 }
 const HTMLID = {
@@ -282,6 +287,14 @@ function UpdateSwarmSetting(SettingID, SaveUpdate = true) {
         case 'grid':
             if(Settings[SettingID] != Math.floor(Settings[SettingID]))
                 SettingsSet(SettingID, Math.floor(Settings[SettingID]), SaveUpdate);
+            break;
+        case 'direction_shift_chance':
+            Colony.entityAngleChangeChance = Settings[SettingID]/100;
+            Colony.objectiveAngleChangeChance = Settings[SettingID]/100;
+            break;
+        case 'direction_shift_multi':
+            Colony.entityAngleChangeMultiplier = Settings[SettingID]/100;
+            Colony.objectiveAngleChangeMultiplier = Settings[SettingID]/100;
             break;
         case 'only_log_good_connections':
             if(!Settings[SettingID] && SaveUpdate)
@@ -1078,7 +1091,7 @@ function draw() {
             switch(connection.status) { 
                 case 'CONNECTION_SUCCESSFUL':
                     CanvasContext.strokeStyle = Settings['colors'] ? (
-                        Settings['mono_color'] ? colors.entities : ConnectionColors.success
+                        Settings['mono_color'] ? ConnectionColors.success : ConnectionColors.success
                         ) : colors.entities;
                     CanvasContext.lineWidth *= ConnectionSizeMult.success;
                     break;

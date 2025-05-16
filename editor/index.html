@@ -302,7 +302,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10"/><path d="M14 2v4a2 2 0 0 0 2 2h4m-9.6 4.6a2 2 0 1 1 3 3L8 21l-4 1l1-4Z"/></g></svg>
                     </div>
                     <div class="name">
-                        Load maze
+                        Maze
                     </div>
                 </a>
                 <a class="button non-important" id="map_preset_broken_maze">
@@ -310,7 +310,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10"/><path d="M14 2v4a2 2 0 0 0 2 2h4m-9.6 4.6a2 2 0 1 1 3 3L8 21l-4 1l1-4Z"/></g></svg>
                     </div>
                     <div class="name">
-                        Load broken maze
+                        Broken maze
                     </div>
                 </a>
                 <a class="button non-important" id="map_preset_city">
@@ -318,7 +318,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10"/><path d="M14 2v4a2 2 0 0 0 2 2h4m-9.6 4.6a2 2 0 1 1 3 3L8 21l-4 1l1-4Z"/></g></svg>
                     </div>
                     <div class="name">
-                        Load urban Maze
+                        Urban Maze
                     </div>
                 </a>
             </div>
@@ -591,6 +591,30 @@
                                             </svg>
                                         </div>
                                     </button>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="swarm-setting" id="direction_shift_chance">
+                            <span>
+                                <div class="name">
+                                    Direction shift chance
+                                </div>
+                            </span>
+                            <span class="warm-setting-right-part">
+                                <div class="state">
+                                    <input type="number" min="0" max="100" value="10" onchange="SettingsSet('direction_shift_chance', this.value);" onclick="this.select();">
+                                </div>
+                            </span>
+                        </div>
+                        <div class="swarm-setting" id="direction_shift_multi">
+                            <span>
+                                <div class="name">
+                                    Direction shift power
+                                </div>
+                            </span>
+                            <span class="warm-setting-right-part">
+                                <div class="state">
+                                    <input type="number" min="0" max="100" value="10" onchange="SettingsSet('direction_shift_multi', this.value);" onclick="this.select();">
                                 </div>
                             </span>
                         </div>
