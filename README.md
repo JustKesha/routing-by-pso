@@ -1,20 +1,15 @@
-# 🔄 Routing by PSO
+# 🕊️ Routing by PSO - Website
 
-<div align="center">
-  
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-![Languages](https://img.shields.io/badge/Languages-EN_|_RU-success)
-![Version](https://img.shields.io/badge/Version-1.0-orange)
-
-</div>
-
-<p align="center">
-  <img src="media/connections.gif" alt="Routing Demo" width="600">
-</p>
-
-## 📋 Overview
+[![Website: Live](https://img.shields.io/badge/Website-Live-green?labelColor=070707)](https://justkesha.github.io/routing-by-pso/)
+[![Languages: Eng/Rus](https://img.shields.io/badge/Languages-EN_|_RU-yellow?labelColor=070707)](https://justkesha.github.io/routing-by-pso/settings/#theme_dark)
+[![Version](https://img.shields.io/badge/Version-1.0-orange?labelColor=070707)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?labelColor=070707)](LICENSE)
 
 This project visualizes the power of **Particle Swarm Optimization (PSO)** for solving complex routing problems. Originally developed as a university project, it provides an interactive way to understand how swarm intelligence can be used for pathfinding and route optimization.
+
+<div align="center">
+  <img alt="Demo Showcase" src="media/connections.gif" width="100%">
+</div>
 
 ## ✨ Features
 
