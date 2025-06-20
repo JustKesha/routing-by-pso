@@ -1,4 +1,4 @@
-# 🕊️ Routing by PSO
+# 🕊️ Routing by PSO ([Перевести?](PROCHTI.md))
 
 [![Website: Live](https://img.shields.io/badge/Website-LIVE-green?labelColor=070707)](https://justkesha.github.io/routing-by-pso/)
 [![Languages: Eng/Rus](https://img.shields.io/badge/Languages-EN_|_RU-orange?labelColor=070707)](https://justkesha.github.io/routing-by-pso/settings/#theme_dark)
