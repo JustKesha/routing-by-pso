@@ -1,53 +1,56 @@
-# 🕊️ Routing by PSO - Website
+# 🕊️ Routing by PSO
 
-[![Website: Live](https://img.shields.io/badge/Website-Live-green?labelColor=070707)](https://justkesha.github.io/routing-by-pso/)
-[![Languages: Eng/Rus](https://img.shields.io/badge/Languages-EN_|_RU-yellow?labelColor=070707)](https://justkesha.github.io/routing-by-pso/settings/#theme_dark)
-[![Version](https://img.shields.io/badge/Version-1.0-orange?labelColor=070707)](#)
+[![Website: Live](https://img.shields.io/badge/Website-LIVE-green?labelColor=070707)](https://justkesha.github.io/routing-by-pso/)
+[![Languages: Eng/Rus](https://img.shields.io/badge/Languages-EN_|_RU-orange?labelColor=070707)](https://justkesha.github.io/routing-by-pso/settings/#theme_dark)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?labelColor=070707)](LICENSE)
 
-This project visualizes the power of **Particle Swarm Optimization (PSO)** for solving complex routing problems. Originally developed as a university project, it provides an interactive way to understand how swarm intelligence can be used for pathfinding and route optimization.
+This project visualizes the power of [Particle Swarm Optimization (PSO)](https://en.wikipedia.org/wiki/Particle_swarm_optimization) for solving complex routing problems. Developed a while ago as a university side project, it provides an interactive way to understand how [swarm intelligence](https://en.wikipedia.org/wiki/Swarm_intelligence) can be used for pathfinding and route optimization.
 
-<div align="center">
-  <img alt="Demo Showcase" src="media/connections.gif" width="100%">
-</div>
+<img alt="Preview Banner" src="./media/preview.png" width="100%">
 
-## ✨ Features
+The website is avalible at [justkesha.github.io/routing-by-pso](https://justkesha.github.io/routing-by-pso/), thanks to [GitHub pages](https://pages.github.com).
 
-- 🛠️ **Interactive Editor**: Customize routes, nodes, and obstacles in real-time
-- 🌍 **OpenStreetMap Integration**: Load real-world maps to solve practical routing problems
-- 🔄 **Dynamic Visualization**: Watch particles move and adapt as they search for optimal routes
-- 🔗 **Sharing Capabilities**: Easily share your routes and simulations with others
-- 🌐 **Multilingual Support**: Available in both English and Russian
-- 🎨 **Theme Options**: Multiple visual themes to customize your experience
+## Overview
 
-## 🚀 Getting Started
+Example scenario from the [website](https://justkesha.github.io/routing-by-pso/) (no obstacles, two targets, connections view preset):
 
-Simply visit [https://justkesha.github.io/routing-by-pso/](https://justkesha.github.io/routing-by-pso/) to start experimenting with the application. No installation required!
+<img alt="Demo Showcase" src="media/connections.gif" width="600px">
+
+### Features:
+
+- **Powerful Editor**: Customize obstacles, particles and targets in real-time
+- **OpenStreetMap Integration**: Load real-world maps to solve practical routing problems
+- **Dynamic Visualization**: Watch particles move and adapt as they search for optimal routes
+- **Sharing Features**: Easily share your routes and simulations with others using links or codes
+- **Multilingual Support**: Available in both English and Russian
+- **Many Settings**: Lots settings and presets for you to play around with
+- **Themes**: Multiple visual themes to customize your experience
 
 ### How to Use:
 
-1. Open the editor by clicking on the "Editor" link
-2. Create nodes and connections to define your routing problem
-3. Adjust parameters like particle count, speed, and intelligence
+1. Go to [justkesha.github.io/routing-by-pso](https://justkesha.github.io/routing-by-pso/) and open the editor tab
+2. Use brushes on the top right to define your routing problem
+3. Adjust display and simulation parameters to your liking
 4. Run the simulation to see PSO in action
 5. Share your results with the built-in link generator
 
-## 💻 Implementation
+## Implementation
 
-The project uses vanilla JavaScript with classes to implement the PSO algorithm:
+This project is based on my prior developed JS module for PSO routing, you can read more about it in [this repository](https://github.com/JustKesha/js-pso-routing).<br>
+Website is made using vanilla HTML, CSS & JS. Animation is done using the canvas element.
 
-- `SwarmEntity` - Represents a single particle in the swarm
-- Custom rendering for optimal visualization
-- Event-based architecture for real-time interaction
+Animation from the [main module repository](https://github.com/JustKesha/js-pso-routing):
 
-## 🔍 About PSO
+<img alt="PSO Wiki Animation" src="https://raw.githubusercontent.com/JustKesha/js-pso-routing/main/preview.gif" width="320px">
 
-Particle Swarm Optimization is a computational method that optimizes a problem by iteratively trying to improve a candidate solution with regard to a given measure of quality. It solves a problem by having a population of candidate solutions (particles) and moving these particles around in the search-space according to simple mathematical formulae.
+## About PSO
 
-## 📱 Compatibility
+Wiki animation - A particle swarm searching for the global minimum of a function:
 
-Works in all modern browsers supporting HTML5 Canvas.
+<img alt="PSO Wiki Animation" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/ParticleSwarmArrowsAnimation.gif" width="450px">
 
-## 📄 License
+[Particle Swarm Optimization](https://en.wikipedia.org/wiki/Particle_swarm_optimization) is a computational method that optimizes a problem by iteratively trying to improve a candidate solution with regard to a given measure of quality. It solves a problem by having a population of candidate solutions (particles) and moving these particles around in the search-space according to simple mathematical formulae.
+
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
