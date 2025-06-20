@@ -1,30 +1,30 @@
-# Routing by PSO
+# Маршрутизация с помощью PSO
 
-This project demonstrates how Particle Swarm Optimization (PSO) can be used to solve routing problems. Originally created as a university project, it features an interactive interface for building and solving pathfinding scenarios.
+Этот проект демонстрирует, как метод роя частиц (PSO) может использоваться для решения задач маршрутизации. Изначально создан как университетский проект, он включает интерактивный интерфейс для построения и решения задач поиска пути.
 
-## Features
+## Возможности
 
-- Interactive route and node editor
-- Real map loading using OpenStreetMap
-- Real-time particle visualization
-- Shareable simulation results
-- English and Russian language support
-- Theme customization
+- Интерактивный редактор маршрутов и узлов
+- Загрузка реальных карт через OpenStreetMap
+- Визуализация частиц в реальном времени
+- Возможность делиться результатами симуляции
+- Поддержка английского и русского языков
+- Настройка темы оформления
 
-## How to Use
+## Как пользоваться
 
-1. Visit the live app: https://justkesha.github.io/routing-by-pso/
-2. Use the editor to place nodes and set obstacles
-3. Configure simulation parameters
-4. Run the PSO simulation to find optimized paths
-5. Share or save the results
+1. Перейдите по ссылке: https://justkesha.github.io/routing-by-pso/
+2. Используйте редактор для размещения узлов и установки препятствий
+3. Настройте параметры симуляции
+4. Запустите симуляцию PSO для поиска оптимальных маршрутов
+5. Сохраните или поделитесь результатами
 
-## Technical Details
+## Технические детали
 
-- Built with vanilla JavaScript (using ES6 classes)
-- Custom event-based rendering
-- Works in all modern browsers
+- Реализовано на чистом JavaScript (ES6 классы)
+- Пользовательский рендеринг на основе событий
+- Работает во всех современных браузерах
 
-## License
+## Лицензия
 
-This project is under the MIT License. See LICENSE file for more information.
+Проект распространяется по лицензии MIT. Подробнее см. файл LICENSE.
